@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Publish to gh-pages
 
 ng build --prod --base-href "https://justynaj.github.io/angular-carousel/"
-ngh --dir .\dist\
+ngh --dir .\dist\angular-carousel
