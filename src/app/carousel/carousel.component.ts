@@ -9,6 +9,7 @@ import { Card } from "../cards.interface";
 })
 export class CarouselComponent implements OnInit {
   public cardsToShow: Card[];
+  public isPrevVisible = false;
   public isNextVisible = false;
   private cards: Card[];
   private batchIndex: number = null;
@@ -22,7 +23,7 @@ export class CarouselComponent implements OnInit {
 
   public showNext(): void {
     this.batchIndex += this.batchSize;
-    this.setNextVisibility();
+    this.setNavVisibility();
     this.getCardsBatch();
   }
 
@@ -31,15 +32,16 @@ export class CarouselComponent implements OnInit {
     if (this.batchIndex < 0) {
       this.batchIndex = 0;
     }
-    this.setNextVisibility();
+    this.setNavVisibility();
     this.getCardsBatch();
   }
 
-  private setNextVisibility(): void {
-    this.isNextVisible = !(
-      this.batchIndex >
-      this.cards.length - this.batchSize
-    );
+  private setNavVisibility(): void {
+    this.isNextVisible =
+      this.cards.length > this.batchSize &&
+      !(this.batchIndex > this.cards.length - this.batchSize);
+
+    this.isPrevVisible = this.batchIndex > 0;
   }
 
   private getCardsBatch(): void {
@@ -56,9 +58,7 @@ export class CarouselComponent implements OnInit {
     this.cardsService.getCardsJson().subscribe((data: Card[]) => {
       if (data) {
         this.cards = data;
-        if (this.cards.length > this.batchSize) {
-          this.isNextVisible = true;
-        }
+        this.setNavVisibility();
         this.getCardsBatch();
       }
     });

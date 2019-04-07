@@ -2,11 +2,7 @@
   *ngFor="let card of cardsToShow"
   [card]="card"
 ></app-carousel-item>
-<button
-  *ngIf="batchIndex && batchIndex > 0"
-  (click)="showPrev()"
-  class="nav-prev"
->
+<button *ngIf="isPrevVisible" (click)="showPrev()" class="nav-prev">
   &laquo;
 </button>
 <button *ngIf="isNextVisible" (click)="showNext()" class="nav-next">
