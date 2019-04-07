@@ -1,0 +1,16 @@
+[
+  { "name": "Ace", "url": "https://cards.photos/tiles/ace.svg" },
+  { "name": "2", "url": "https://cards.photos/tiles/2.svg" },
+  { "name": "3", "url": "https://cards.photos/tiles/3.svg" },
+  { "name": "4", "url": "https://cards.photos/tiles/4.svg" },
+  { "name": "5", "url": "https://cards.photos/tiles/5.svg" },
+  { "name": "6", "url": "https://cards.photos/tiles/6.svg" },
+  { "name": "7", "url": "https://cards.photos/tiles/7.svg" },
+  { "name": "8", "url": "https://cards.photos/tiles/8.svg" },
+  { "name": "9", "url": "https://cards.photos/tiles/9.svg" },
+  { "name": "10", "url": "https://cards.photos/tiles/10.svg" },
+  { "name": "Jack", "url": "https://cards.photos/tiles/jack.svg" },
+  { "name": "Queen", "url": "https://cards.photos/tiles/queen.svg" },
+  { "name": "King", "url": "https://cards.photos/tiles/king.svg" },
+  { "name": "Joker", "url": "https://cards.photos/tiles/joker.svg" }
+]
